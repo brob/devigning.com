@@ -4,6 +4,8 @@
 html {
     font-size: 18px;
 }
+
+
 body {
     background-image: linear-gradient(to right, #4776e6, #8e54e9);
     min-height: 100vh;
@@ -11,6 +13,12 @@ body {
     font-family: "Merriweather", serif;
     font-weight: 300;
     margin: 0;
+
+    background: linear-gradient(130deg, #4776e6, #8e54e9, #33d0ff, #33ffb0);
+    background-size: 800% 800%;
+    -webkit-animation: bodyBG 60s linear infinite;
+    -moz-animation: bodyBG 60s linear infinite;
+    animation: bodyBG 60s linear infinite;
 }
 .banner {
     color: white;
@@ -47,4 +55,20 @@ body {
 }
 .banner__cta:hover {
     background-color: #61adc0;
+}
+
+@-webkit-keyframes bodyBG {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes bodyBG {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes bodyBG { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
