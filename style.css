@@ -8,7 +8,8 @@ body {
     background-image: linear-gradient(to right, #4776e6, #8e54e9);
     min-height: 100vh;
     display: flex;
-    font-family: "Roboto", sans-serif;
+    font-family: "Merriweather", serif;
+    font-weight: 300;
     margin: 0;
 }
 .banner {
@@ -23,11 +24,12 @@ body {
 .banner__title {
     font-size: 5.2rem;
     margin-bottom: 1rem;
-    font-weight: normal;
+    font-weight: 300;
 }
 .banner__subtitle {
     font-size: 2rem;
-    font-weight: normal;
+    line-height: 1.4em;
+    font-weight: 300;
 }
 .banner__cta {
     display: block;
