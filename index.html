@@ -11,14 +11,54 @@
 <body>
 
     <div class="banner">
-        <h1 class="banner__title">Become a Devigner</h1>
+        <h1 class="banner__title">Design It. Develop It.</h1>
         <h2 class="banner__subtitle">Master the art of coupling your design skills with simple development tools to create dynamic websites.</h2>
         <a href="#" class="banner__cta">Sign up now</a>
     </div>
 
+    <modal class="modal">
+        
+        <div class="modal__content">
+            <h3 class="modal__title">Hello world!</h3>
+            <form action="" class="modal__form">
+                <input type="text" name="" id="">
+                <input type="text" name="" id="">
+                <input type="text" name="" id="">
+                <input type="text" name="" id="">
+                <input type="text" name="" id="">
+                <input type="text" name="" id="">
+                <input type="text" name="" id="">
+            </form>
+
+            <a href="#" class="close">Cancel</a>
+        </div>
+    </modal>
 
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400" rel="stylesheet">
 
+    <script>
+        const cta = document.querySelector('.banner__cta');
+        const modal = document.querySelector('modal');
+        cta.addEventListener("click", function(e){
+            e.preventDefault;
+            modal.classList.toggle('visible');
+            console.log(modal.classList);
+         },false);
+        
+
+        const close = document.querySelector('.close');
+        
+        close.addEventListener("click", function(e) {
+        e.preventDefault;
+        modal.classList.toggle('visible');
+        }, false);
+        
+        window.addEventListener("keyup", function(e) {
+            if (e.keyCode == 27) {
+                modal.classList.remove('visible');
+            }
+        });
+    </script>
     
 </body>
 </html>
