@@ -11,9 +11,11 @@
 <body>
 
     <div class="banner">
-        <h1 class="banner__title">Design It. Develop It.</h1>
-        <h2 class="banner__subtitle">Master the art of coupling your design skills with simple development tools to create dynamic websites.</h2>
-        <a href="#" class="banner__cta">Sign up now</a>
+        <div class="banner__content">
+            <h1 class="banner__title">Learn CSS Today</h1>
+            <h3 class="banner__subtitle">CSS has improved by leaps and bounds in the past five years. If you or your team hasn't been paying attention, you may have fallen behind. Let me catch you up.</h3>
+            <a href="#" class="banner__cta modal__open">Sign up now</a>
+    </div>
     </div>
 
     <modal class="modal">
@@ -44,18 +46,43 @@
         </div>
     </modal>
 
+    <section class="bisect">
+        <div class="bisect__section">
+            <h2>Learn to grow your personal skills</h2>
+            <p>I provide 1-on-1 mentoring to help you discover all the power CSS has to offer. Whatever area you need help with, I'm there for you.</p>
+            <ul class="benefits">
+                <li>Let me teach you modern CSS layout with Grid and Flexbox.</li>
+                <li>Learn to safely modularize your CSS without losing the power of the cascade.</li>
+                <li>Let me review your code AND your design to help you improve all your skills at once.</li>
+                <li>You just want to chat about CSS? I love chatting about CSS!</li>
+            </ul>
+        </div>
+        <div class="bisect__section">
+            <h2>Up your team's game</h2>
+            <p>If your team needs to catch up quickly, I can come on site to provide a workshop on modern CSS development.</p>
+            <ul class="benefits">
+                <li>Super charge your team's styling efforts with new layout powers with Grid and Flexbox.</li>
+                <li>Protect your team from missteps by modularizing your CSS and create a cohesive workflow.</li>
+                <li>Build your own styleguide and design system to progress your product's design and consistency.</li>
+                <li>Almost any other CSS topic</li>
+                </ul>
+        </div>
+        <a href="#" class="bisect__cta modal__open">Start your journey today</a>
+    </section>
+
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400" rel="stylesheet">
 
     <script>
-        const cta = document.querySelector('.banner__cta');
+        const cta = document.querySelectorAll('.modal__open');
         const modal = document.querySelector('modal');
         const close = document.querySelector('.modal__close');
-
-        cta.addEventListener("click", function(e){
-            e.preventDefault;
-            modal.classList.toggle('visible');
-         },false);
-        
+        Array.from(cta).forEach(link => {
+            link.addEventListener('click', function(e){
+                e.preventDefault();
+                modal.classList.toggle('visible');
+             },false);
+        });
+       
 
         
         close.addEventListener("click", closeModal, false);
@@ -67,7 +94,7 @@
         });
 
         function closeModal(e) {
-            if (e) {e.preventDefault;}
+            if (e) {e.preventDefault();}
             modal.classList.remove('visible');
         }
     </script>
