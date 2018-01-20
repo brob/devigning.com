@@ -17,17 +17,27 @@
     </div>
 
     <modal class="modal">
-        
         <div class="modal__content">
-            <h3 class="modal__title">Hello world!</h3>
-            <form action="" class="modal__form">
-                <input type="text" name="" id="">
-                <input type="text" name="" id="">
-                <input type="text" name="" id="">
-                <input type="text" name="" id="">
-                <input type="text" name="" id="">
-                <input type="text" name="" id="">
-                <input type="text" name="" id="">
+            <a href="#" class="modal__close">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"><path fill="#000000" d="M93,93.6c-5.2,5-13.4,5-18.6,0L50,68.7L24.9,93.1c-5.2,5-13.4,5-18.6,0c-5.2-5-5-13.4,0-18.6l25.1-24.4L7,25  C2,19.8,2,11.6,7,6.4c5.2-5,13.4-5,18.6,0L50,31.6L75.1,7.1c5.2-5,13.4-5,18.6,0c5.2,5,5,13.4,0,18.6L68.6,50.1L93,75.2  C98.2,80.4,98,88.6,93,93.6z"></path></svg>
+            </a> 
+
+            <h3 class="modal__title">Start Learning Today</h3>
+            <form name="contact" netlify-honeypot="honeypot" action="thank-you" netlify class="modal__form">
+                <label for="name">Full Name <span class="required">*</span><input required type="text" name="Name" placeholder="Let's start with names"></label>
+                <label for="company">Company/Organization (optional) <input type="text" name="company" placeholder="If your with a conference or company... which?"></label>
+                <label class="input--full-span" for="type">Session Type *<select required name="type">
+                        <option value="null">-- Select a Session --</option>
+                        <option value="one-on-one">1-on-1</option>
+                        <option value="Company Workshop">Company Workshop</option>
+                        <option value="Conference Workshop">Conference Workshop</option>
+                        <option value="Conference Session">Conference Session</option>
+                        <option value="Other">Other</option>
+
+                    </select></label>
+                <label class="input--full-span" for="details">What do you need? *<textarea placeholder="Tell me about your needs. Are you a beginner? A designer? Does your company need help with new CSS?" required name="details" cols="30" rows="10"></textarea></label>
+                <label class="input--hidden" for="honeypot">Don't fill this out <input type="text" name="honeypot"></label>
+                <button class="button input--full-span" type="submit">Make Contact</button>
             </form>
 
             <a href="#" class="close">Cancel</a>
@@ -39,25 +49,27 @@
     <script>
         const cta = document.querySelector('.banner__cta');
         const modal = document.querySelector('modal');
+        const close = document.querySelector('.modal__close');
+
         cta.addEventListener("click", function(e){
             e.preventDefault;
             modal.classList.toggle('visible');
-            console.log(modal.classList);
          },false);
         
 
-        const close = document.querySelector('.close');
         
-        close.addEventListener("click", function(e) {
-        e.preventDefault;
-        modal.classList.toggle('visible');
-        }, false);
+        close.addEventListener("click", closeModal, false);
         
         window.addEventListener("keyup", function(e) {
             if (e.keyCode == 27) {
-                modal.classList.remove('visible');
+                closeModal();
             }
         });
+
+        function closeModal(e) {
+            if (e) {e.preventDefault;}
+            modal.classList.remove('visible');
+        }
     </script>
     
 </body>
