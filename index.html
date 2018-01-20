@@ -25,8 +25,9 @@
             <h3 class="modal__title">Start Learning Today</h3>
             <form name="contact" netlify-honeypot="honeypot" action="thank-you" netlify class="modal__form">
                 <label for="name">Full Name <span class="required">*</span><input required type="text" name="Name" placeholder="Let's start with names"></label>
+                <label for="_reply-to">Email Address <input type="email" name="_reply-to" placeholder="I'll only use this to get in touch"></label>
                 <label for="company">Company/Organization (optional) <input type="text" name="company" placeholder="If your with a conference or company... which?"></label>
-                <label class="input--full-span" for="type">Session Type *<select required name="type">
+                <label for="type">Session Type *<select required name="type">
                         <option value="null">-- Select a Session --</option>
                         <option value="one-on-one">1-on-1</option>
                         <option value="Company Workshop">Company Workshop</option>
@@ -40,7 +41,6 @@
                 <button class="button input--full-span" type="submit">Make Contact</button>
             </form>
 
-            <a href="#" class="close">Cancel</a>
         </div>
     </modal>
 
