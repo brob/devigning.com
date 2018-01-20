@@ -76,16 +76,15 @@ label {
     margin: auto;
     max-width: 600px;
     padding: 20px 50px;
-    /* color: white; */
+    background-color: #eaee44;
+    color: black;
     font-size: 1.3rem;
-    background-color: #068D9D;
     text-decoration: none;
     text-shadow: none;
     border-radius: 20px;
     box-shadow: 2px 2px 4px #111;
     transition: transform .4s;
     transition-timing-function: cubic-bezier(0,2,1,1);
-    animation: 60s buttonBG linear infinite;
 }
 .banner__cta:hover {
     transform: scale(1.15) rotate(1.5deg);
