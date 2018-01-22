@@ -82,7 +82,7 @@ label {
 }
 .banner__cta {
     display: block;
-    margin: auto;
+    margin: 0 auto 20px;
     max-width: 600px;
     padding: 20px 50px;
     background-color: #eaee44;
@@ -98,6 +98,18 @@ label {
 .banner__cta:hover {
     transform: scale(1.15) rotate(1.5deg);
     transition-timing-function: cubic-bezier(0,4,1,1);
+}
+
+@media (max-width: 950px) {
+    .banner__content {
+        width: 90vw;
+    }
+    .banner__title {
+        font-size: 3rem;
+    }
+    .banner__subtitle {
+        font-size: 1.2rem;
+    }
 }
 
 
@@ -233,6 +245,26 @@ label {
     font-weight: bold;
 }
 
+@media (max-width: 850px) {
+    .modal__form {
+        display: block;
+    }
+    .modal__form input, .modal__form select, .modal__form textarea {
+        margin-bottom: 20px;
+    }
+    .bisect {
+        display: block;
+        width: 90vw;
+    }
+    .bisect__section:first-child {
+        border-right: 0;
+    }
+    .bisect__cta {
+        display: block;
+        width: 100%;
+    }
+}
+
 
 .about {
     width: 80vw;
@@ -282,6 +314,22 @@ label {
 .about__content a:hover {
     color: #1689ac;
 }
+
+@media (max-width: 550px) {
+    .about {
+        display: block;
+        width: 95vw;
+        margin-bottom: 2vh;
+    }
+    .about__title {
+        padding: 20px 0;
+        transform: rotate(-2deg) translateX(-25px) translateY(30px);
+
+    }
+    .about__content {
+        padding: 20px 10px;
+    }
+} 
 
 .site-footer {
     background-image: linear-gradient(120deg, #4776e6, #8e54e9);
