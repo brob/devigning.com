@@ -290,11 +290,27 @@ label {
 .about__headshot img {
     max-width: 100%;
     display: block;
+    z-index: 1;
 }
 .about__headshot {
     grid-area: headshot;
     grid-row: 1 / 3;
-
+    align-self: start;
+    mix-blend-mode: soft-light;
+    position: relative;
+    
+}
+.about__headshot::before {
+    display: block;
+    content: "";
+    background-image: linear-gradient(120deg, #4776e6, #8e54e9);
+    mix-blend-mode: hard-light;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
 }
 .about__content {
     grid-area: about;
