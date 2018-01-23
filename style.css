@@ -288,7 +288,8 @@ label {
 
     font-size: 1.5rem;
     background-size: 300% 300%;
-    background-image: linear-gradient(120deg, #33d0ff, #eaee44);
+    background-position: center right;
+    background-image: linear-gradient(120deg, #eaee44, #33d0ff);
 }
 .about__headshot img {
     max-width: 100%;
@@ -306,7 +307,7 @@ label {
 .about__headshot::before {
     display: block;
     content: "";
-    background-image: linear-gradient(130deg, #4776e6, #8e54e9);
+    background-image: linear-gradient(130deg, #3568e0, #a46dfd);
     mix-blend-mode: hard-light;
     position: absolute;
     width: 100%;
@@ -351,13 +352,16 @@ label {
     .about__content {
         padding: 20px 10px;
     }
+    .about__content p {
+        transform: rotate(0deg);
+    }
 } 
 
 .site-footer {
     background-image: linear-gradient(120deg, #4776e6, #8e54e9);
 
 
-    clip-path: polygon(0 30%, 100% 0%, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%);
 
 
     min-height: 6vh;
