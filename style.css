@@ -353,10 +353,7 @@ label {
 
 }
 .about__content a:hover::before {
-
     opacity: 1;
-
-
 }
 
 @media (max-width: 550px) {
