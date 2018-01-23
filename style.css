@@ -306,7 +306,7 @@ label {
 .about__headshot::before {
     display: block;
     content: "";
-    background-image: linear-gradient(120deg, #4776e6, #8e54e9);
+    background-image: linear-gradient(130deg, #4776e6, #8e54e9);
     mix-blend-mode: hard-light;
     position: absolute;
     width: 100%;
@@ -314,6 +314,9 @@ label {
     top: 0;
     left: 0;
     z-index: 0;
+}
+.about__headshot:hover ::before {
+    background-position-x: 100%;
 }
 .about__content {
     grid-area: about;
