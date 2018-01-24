@@ -53,16 +53,24 @@ label {
     text-shadow: 1px 1px 2px #111;
     min-height: 95vh;
     padding: 10vh 0 15vh;
+    position: relative;
     display: flex;
-
-    background-image: linear-gradient(120deg, #4776e6, #8e54e9, #33d0ff, #eaee44);
-    background-size: 800% 800%;
-    -webkit-animation: bodyBG 60s linear infinite;
-    -moz-animation: bodyBG 60s linear infinite;
-    animation: bodyBG 60s linear infinite;
-
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-
+    overflow-x: hidden;
+}
+.banner::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 850%;
+    background-image: linear-gradient(130deg, #4776e6, #8e54e9, #33d0ff, #eaee44);
+    -webkit-animation: bodyBG 40s linear infinite alternate;
+    -moz-animation: bodyBG 40s linear infinite alternate;
+    animation: bodyBG 40s linear infinite alternate;
+    z-index: -1;
 }
 .banner__content {
     width: 70vw;
@@ -416,27 +424,23 @@ label {
     background-image: linear-gradient(120deg, #4776e6, #8e54e9);
 
 
-    clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%);
+    /* clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%); */
 
 
-    min-height: 6vh;
+    min-height: 2vh;
 }
 
 
 @-webkit-keyframes bodyBG {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    100%{trasform: translateX(calc(100% - 100vw))}
+
 }
 @-moz-keyframes bodyBG {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    100%{trasform: translateX(calc(100% - 100vw))}
 }
 @keyframes bodyBG { 
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    100%{transform: translateX(-700vw)}
+
 }
 
 @keyframes buttonBG {
