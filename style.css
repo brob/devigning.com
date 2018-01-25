@@ -305,6 +305,7 @@ label {
     flex: 1 .5;
     padding-top: 10px;
     padding-bottom: 10px;
+    border: 0;
 }
 @media (max-width: 600px) {
     .newsletter input, .newsletter placeholder {
