@@ -299,6 +299,7 @@ label {
 .newsletter input {
     flex: 4 1;
     height: auto;
+    border: 0;
 }
 .newsletter__button {
     flex: 1 .5;
