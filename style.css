@@ -341,6 +341,9 @@ label {
     align-items: center;
     justify-content: center;
 
+    position: relative;
+    z-index: 10;
+
     transform: rotate(-1deg) translateX(-50px) translateY(20px);
 
     font-size: 1.5rem;
@@ -417,10 +420,8 @@ label {
         margin-bottom: 2vh;
     }
     .about__title {
-        position: relative;
         padding: 20px 0;
         transform: rotate(-2deg) translateX(-10px) translateY(20px);
-        z-index: 10;
     }
     .about__content {
         padding: 20px 10px;
